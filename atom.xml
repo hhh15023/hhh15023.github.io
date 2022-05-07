@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-05-07T08:30:31.736Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hhh01</title>
+    <link href="http://example.com/2022/05/07/hhh01/"/>
+    <id>http://example.com/2022/05/07/hhh01/</id>
+    <published>2022-05-06T16:02:12.000Z</published>
+    <updated>2022-05-07T08:30:31.736Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="欢迎来到我的第一篇博客-（用于记录如何创建一个博客）"><a href="#欢迎来到我的第一篇博客-（用于记录如何创建一个博客）" class="headerlink" title="欢迎来到我的第一篇博客 （用于记录如何创建一个博客）"></a>欢迎来到我的第一篇博客 （用于记录如何创建一个博客）</h3><h4 id="1-搭建博客前的准备（即环境的配置）"><a href="#1-搭建博客前的准备（即环境的配置）" class="headerlink" title="1.  搭建博客前的准备（即环境的配置）"></a>1.  搭建博客前的准备（即环境的配置）</h4><h5 id="二个需要的工具（git和node-js-和-github的账号注册"><a href="#二个需要的工具（git和node-js-和-github的账号注册" class="headerlink" title="二个需要的工具（git和node.js) 和 github的账号注册"></a>二个需要的工具（git和node.js) 和 github的账号注册</h5><h6 id="1-git-的安装说明（官网地址：https-git-scm-com-）"><a href="#1-git-的安装说明（官网地址：https-git-scm-com-）" class="headerlink" title="1. git 的安装说明（官网地址：https://git-scm.com/）"></a>1. git 的安装说明（官网地址：<a href="https://git-scm.com/%EF%BC%89">https://git-scm.com/）</a></h6><ul><li><p>安装好后鼠标右键会多出<strong>Git GUI here</strong> 和 **Git Bash Here ** 我们之后使用 <strong>Git Bash Here</strong> 如图：</p><p><img src="https://s2.loli.net/2022/05/07/TVj4P9FduIkh8n1.png" alt="image-20220507001919878"></p></li><li><p>点击 <strong>Git Bash Here</strong> 弹出控制台 这里介绍一些 之后会使用到的一些命令</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git --version // 查看git的版本</span><br><span class="line">git config list // 查看git的配置</span><br><span class="line">git config --global --list // 查看global中的配置 后续有用到</span><br><span class="line">git remote <span class="built_in">rm</span> origin // 删除原来的远程库</span><br><span class="line">git remote add origin <span class="string">&quot;你的仓库地址&quot;</span>// 添加上传的远程仓库(github)具体后面</span><br><span class="line">git pull --rebase origin master // 将远程库同步到本地库</span><br><span class="line">git add xxxx// 缓冲上传内容</span><br><span class="line">git commit -m <span class="string">&quot;注释信息&quot;</span> //  上传到远程库</span><br><span class="line"></span><br><span class="line">ssh -T git@github.com // 测试是否连接上github</span><br><span class="line"></span><br></pre></td></tr></table></figure></li></ul><h6 id="2-Node-js-的安装（官网：http-nodejs-cn"><a href="#2-Node-js-的安装（官网：http-nodejs-cn" class="headerlink" title="2. Node.js 的安装（官网：http://nodejs.cn/)"></a>2. Node.js 的安装（官网：<a href="http://nodejs.cn/">http://nodejs.cn/</a>)</h6><ul><li><p>安装结束后可以使用 node -v来检测安装是否成功<img src="https://s2.loli.net/2022/05/07/WRU1cLsJIOkNCpb.png" alt="image-20220507004058232"></p></li><li><p>安装成功后的，系统默认会在<strong>C:\Users\用户\AppData\Roaming\npm</strong> 或者你自定义的地址例如我的<strong>D:\Node</strong>。 在该目录下<strong>新建两个文件夹node_global、node_cache</strong>并右键属性在【安全】-&gt;【编辑】-&gt;全部勾选</p></li><li><p>同样在Git bash here 的界面中 进行操作配置文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">&quot;你的node_global地址&quot;</span></span><br><span class="line">// 我的则是D:\Node\node_global</span><br><span class="line">npm config <span class="built_in">set</span> cache <span class="string">&quot;你的node_cache地址&quot;</span></span><br><span class="line">// 我的则是D:\Node\node_global</span><br><span class="line">npm config <span class="built_in">set</span> registry=http://registry.npm.taobao.org</span><br><span class="line">// 配置镜像站</span><br><span class="line">npm config list // 显示所有配置信息，这时候C:/Users/用户 会出现 .npmrc文件</span><br><span class="line"></span><br><span class="line">npm install xxx -g // 将xxx完整的下载</span><br></pre></td></tr></table></figure></li><li><p>然后配置电脑的环境变量<strong>设置-&gt;编辑系统环境变量-&gt;环境变量</strong><br>在系统变量中插入[NODE_PATH] 你的文件路径 例子：<img src="https://s2.loli.net/2022/05/07/fsVFywp2NQiRCZo.png" alt="image-20220507004848326"></p></li><li><p>更改path内容 例子<br><img src="https://s2.loli.net/2022/05/07/RpqhUn925vNs7Oo.png" alt="image-20220507004942027"></p></li><li><p>可以测试一下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install express -g </span><br><span class="line">// 如果安装的包在你的node_global中的node_moudules则成功</span><br><span class="line">// 然后安装hexo 和 --hexo-deployer-git</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure></li></ul><h6 id="3-配置ssh-keys-用途-免密的将本地源码和资源上传到github"><a href="#3-配置ssh-keys-用途-免密的将本地源码和资源上传到github" class="headerlink" title="3. 配置ssh keys 用途(免密的将本地源码和资源上传到github)"></a>3. 配置ssh keys 用途(免密的将本地源码和资源上传到github)</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;邮箱地址&quot;</span> // 生成ssh key</span><br><span class="line">// 中途会出现需要你输入的情况，初学建议直接回车不处理</span><br><span class="line">// 结束后出现保存地址 一般是C:/Users/用户/.ssh 中</span><br><span class="line">// 进入该文件 用记事本打开id_rsa.pub 复制全部内容</span><br></pre></td></tr></table></figure><ul><li>打开github主页 的setting<img src="https://s2.loli.net/2022/05/07/telmD7QVS6EA8hi.png" alt="image-20220507010216081"></li><li>选择 <strong>SSH and GPG keys</strong> </li></ul><p><img src="https://s2.loli.net/2022/05/07/VI35ijb9AvZKBEa.png" alt="image-20220507010304814"></p><ul><li>命名并将内容复制进去后添加 后续会需要确定你的github密码<img src="https://s2.loli.net/2022/05/07/rL5fnjG8YPVA9Ey.png" alt="image-20220507010400036"></li><li>然后可以在 <strong>控制台界面中使用 ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a></strong>进行测试</li></ul><h4 id="2-开始搭建博客"><a href="#2-开始搭建博客" class="headerlink" title="2. 开始搭建博客"></a>2. 开始搭建博客</h4><ul><li>在你选择的文件中右键<strong>Git bash Here</strong></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> <span class="built_in">test</span> // 新建一个<span class="built_in">test</span>文件夹</span><br><span class="line">hexo init // 初始化个人博客</span><br><span class="line">hexo g // 生成静态网页</span><br><span class="line">hexo s</span><br><span class="line">// 预览 出现http://localhost:4000 复制到浏览器即可预览</span><br></pre></td></tr></table></figure><ul><li><p>在github中新建<strong>repository</strong> 并命名既可以<br><img src="https://s2.loli.net/2022/05/07/M4TJvOu72Hd68qn.png" alt="image-20220507012028296"></p></li><li><p>然后在test的文件下用记事本打开-config.yml 在最后可以看到并修改</p><p><img src="https://s2.loli.net/2022/05/07/LtXK8UHpAiy7l6T.png" alt="image-20220507012238354"></p></li><li><pre><code class="bash">发布到github中 在控制台中输入hexo d </code></pre></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;欢迎来到我的第一篇博客-（用于记录如何创建一个博客）&quot;&gt;&lt;a href=&quot;#欢迎来到我的第一篇博客-（用于记录如何创建一个博客）&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到我的第一篇博客 （用于记录如何创建一个博客）&quot;&gt;&lt;/a&gt;欢迎来到我的第一</summary>
+      
+    
+    
+    
+    
+    <category term="First" scheme="http://example.com/tags/First/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2022/05/05/hello-world/"/>
+    <id>http://example.com/2022/05/05/hello-world/</id>
+    <published>2022-05-05T14:15:01.574Z</published>
+    <updated>2022-05-06T16:07:26.354Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><h3 id="WeloCome-to-my-blog"><a href="#WeloCome-to-my-blog" class="headerlink" title="WeloCome to my blog"></a>WeloCome to my blog</h3><p>这里将展示 Hexo的使用模块</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
