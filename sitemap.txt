@@ -1,4 +1,6 @@
-http://example.com/2022/05/07/hhh01/
+http://example.com/2022/05/10/ch-pro-001/
 http://example.com/2022/05/05/hello-world/
+http://example.com/2022/05/07/hhh01/
 http://example.com/
+http://example.com/tags/code-ch/
 http://example.com/tags/First/
